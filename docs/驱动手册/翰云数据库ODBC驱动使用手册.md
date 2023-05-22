@@ -8,31 +8,31 @@
 
 ​      安装程序ODBC Win64.exe提供了图形化界面，一般采用默认配置。
 
-![1.1](翰云数据库ODBC驱动使用手册图片/1.1.png) 
+![1.1](翰云数据库ODBC驱动使用手册/1.1.png) 
 
 安装成功后，会在注册表”HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST.INI”的位置创建名为“Cloudwave Database Driver”的驱动，如下图所示。**有些环境平台，因为本地安全策略的限制，注册表可能无法修改，这时可以手动添加注册项。
 
-![1.2](翰云数据库ODBC驱动使用手册图片/1.2.png) 
+![1.2](翰云数据库ODBC驱动使用手册/1.2.png) 
 
 注册项1：在ODBC Drivers新添字符串值Cloudwave Database Driver。
 
-![1.3](翰云数据库ODBC驱动使用手册图片/1.3.png) 
+![1.3](翰云数据库ODBC驱动使用手册/1.3.png) 
 
 注册项2：在ODBCINST.INI新添项FENG_localhost_cloudwave（方便人辨识的数据连接名称即可），并为其添加字符串值Driver、DriverODBCVer和Setup。其中Driver、Setup指向ODBC的安装位置，取默认配置：
 
-![1.4](翰云数据库ODBC驱动使用手册图片/1.4.png) 
+![1.4](翰云数据库ODBC驱动使用手册/1.4.png) 
 
 H:\翰云时代\数据库\20211019新版_java8_兼容mysql\20220210\CloudDriver_20220209\ODBC\cloudodbcnew\Debug\cloudodbc35w.dll
 
-![1.5](翰云数据库ODBC驱动使用手册图片/1.5.png) 
+![1.5](翰云数据库ODBC驱动使用手册/1.5.png) 
 
 ODBC安装成功后，即可通过Windows的ODBC数据源管理器，添加到翰云数据库的DSN（数据源），DSN是配置到数据库的连接。打开“控制面板-系统和安全-管理工具-ODBC数据源(64位)”：
 
-![1.6](翰云数据库ODBC驱动使用手册图片/1.6.png) 
+![1.6](翰云数据库ODBC驱动使用手册/1.6.png) 
 
 在上图中，“驱动软件”页可以看到已经安装的UDB，打开“用户DSN”页，点击“添加”，选择驱动“Cloudwave Database Driver”，弹出如下对话框，在User Name/Password中输入system/CHAGNEME，点击“Test”，如果此时数据库服务已经在本地启动，连接测试成功，点击“Save”保存配置即可。
 
-![1.7](翰云数据库ODBC驱动使用手册图片/1.7.png) 
+![1.7](翰云数据库ODBC驱动使用手册/1.7.png) 
 
 # 2 支持的数据类型
 
